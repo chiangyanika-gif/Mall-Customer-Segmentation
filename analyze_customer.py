@@ -1,6 +1,6 @@
 import pandas as pd
 
-file_name = "/Users/xiang/Documents/PROJECT/Marketing/Customer Segmentation/Mall_Customers_Enhanced.csv"
+file_name = "Mall_Customers_Enhanced.csv"
 
 try:
     df = pd.read_csv(file_name)
@@ -54,7 +54,7 @@ df["Customer_Segment"] = df.apply(segment_customer, axis=1)
 segment_counts = df["Customer_Segment"].value_counts()
 print(segment_counts)
 
-desktop_path = "/Users/xiang/Desktop/Mall_Customers_Segmented.csv"
+desktop_path = "Mall_Customers_Segmented.csv"
 df.to_csv(desktop_path, index=False)
 
 print("File Saved to Desktop!")
